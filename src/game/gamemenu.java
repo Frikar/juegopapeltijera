@@ -94,7 +94,7 @@ public class gamemenu extends javax.swing.JFrame {
         });
 
         btntijera.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btntijera.setText("Tijeras");
+        btntijera.setText("Tijera");
         btntijera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btntijeraActionPerformed(evt);
