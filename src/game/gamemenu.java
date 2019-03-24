@@ -283,7 +283,7 @@ public class gamemenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnpiedraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpiedraActionPerformed
-    lbljugador.setText("Jugador selecciono: Piedra");
+    lbljugador.setText("Jugador selecciono: Piedr");
     }//GEN-LAST:event_btnpiedraActionPerformed
 
     private void btnpapelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpapelActionPerformed
