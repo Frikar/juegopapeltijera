@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JuegoTijeras.jnlp">
+  <information>
+    <title>JuegoTijeras</title>
+    <vendor>Diego Vasquez</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JuegoTijeras.jar" size="68486" download="eager" />
+    <jar href="lib\kotlin-runtime.jar" size="878511" download="eager" />
+  </resources>
+  <application-desc main-class="game.gamemenu"  name="JuegoTijeras" >
+  </application-desc>
+  <update check="always"/>
+</jnlp>
