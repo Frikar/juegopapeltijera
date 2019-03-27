@@ -5,6 +5,8 @@
  */
 package game;
 
+import ia.Computadora;
+
 /**
  *
  * @author Diego Vasquez
@@ -16,7 +18,7 @@ public class gamemenu extends javax.swing.JFrame {
      */
     public gamemenu() {
         initComponents();
-      
+
     }
 
     /**
@@ -283,15 +285,16 @@ public class gamemenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnpiedraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpiedraActionPerformed
-    lbljugador.setText("Jugador selecciono: Piedra");
+        lbljugador.setText("Jugador selecciono: Piedra");
+        Computadora.roca();
     }//GEN-LAST:event_btnpiedraActionPerformed
 
     private void btnpapelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpapelActionPerformed
-    lbljugador.setText("Jugador selecciono: Papel");
+        lbljugador.setText("Jugador selecciono: Papel");
     }//GEN-LAST:event_btnpapelActionPerformed
 
     private void btntijeraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntijeraActionPerformed
-   lbljugador.setText("Jugador selecciono: Tijera");
+        lbljugador.setText("Jugador selecciono: Tijera");
     }//GEN-LAST:event_btntijeraActionPerformed
 
     /**
@@ -325,14 +328,14 @@ public class gamemenu extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new gamemenu().setVisible(true);
-              
+                Computadora ia = new Computadora();
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnpapel;
-    private javax.swing.JButton btnpiedra;
+    public javax.swing.JButton btnpiedra;
     private javax.swing.JButton btntijera;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JFrame jFrame1;
@@ -343,12 +346,12 @@ public class gamemenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel lblcomputador;
+    public javax.swing.JLabel lblcomputador;
     private javax.swing.JLabel lblganar;
     private javax.swing.JLabel lblinicio;
     private javax.swing.JLabel lbljugador;
-    private javax.swing.JLabel lblnum1;
-    private javax.swing.JLabel lblnum2;
+    public javax.swing.JLabel lblnum1;
+    public javax.swing.JLabel lblnum2;
     private javax.swing.JLabel lblpapel1;
     private javax.swing.JLabel lblpapelc;
     private javax.swing.JLabel lblperder;
