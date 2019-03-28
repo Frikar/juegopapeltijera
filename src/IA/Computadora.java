@@ -46,8 +46,8 @@ public class Computadora extends game.gamemenu {
 
         if (random < chancePapel) {
             iaselect = "Papel";
-            iapuntuaje = iapuntuaje++;
-            confianza = confianza++;
+            iapuntuaje = iapuntuaje + 1;
+            confianza = confianza + 1;
             resultado = "Perdiste";
 
             historiaresultado = 0;
@@ -63,7 +63,7 @@ public class Computadora extends game.gamemenu {
             }
             else{
               iaselect = "Tijera";
-              usuariopuntuaje = usuariopuntuaje++;
+              usuariopuntuaje = usuariopuntuaje + 1;
               resultado = "Ganaste";
               historiaresultado = 1;
               estrategia();
@@ -90,9 +90,9 @@ public class Computadora extends game.gamemenu {
 
     public static void estrategia() {
         if (historiaselect.equals(usuarioselect)) {
-            repetirPerder = repetirPerder++;
+            repetirPerder = repetirPerder + 1;
         } else {
-            alterarWin = alterarWin++;
+            alterarWin = alterarWin + 1;
         }
     }
 }
