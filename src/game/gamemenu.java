@@ -107,23 +107,23 @@ public class gamemenu extends javax.swing.JFrame {
 
         lblinicio.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblinicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblinicio.setText("Piedra, Papel, Tijeras");
+        lblinicio.setText("Resultado:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(178, 178, 178)
-                .addComponent(lblinicio)
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addGap(184, 184, 184)
+                .addComponent(lblinicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(183, 183, 183))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(40, 40, 40)
                 .addComponent(lblinicio)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         lblganar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -183,46 +183,11 @@ public class gamemenu extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(lbljugador))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(234, 234, 234)
-                        .addComponent(lblcomputador)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblroca1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(btnpiedra, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(91, 91, 91)
-                                .addComponent(btnpapel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblpapel1)
-                                .addGap(71, 71, 71)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbltijera1)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(btntijera, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12)))
-                        .addGap(43, 43, 43))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(21, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lblganar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -234,6 +199,40 @@ public class gamemenu extends javax.swing.JFrame {
                         .addGap(46, 46, 46)
                         .addComponent(jLabel16)
                         .addGap(7, 7, 7))))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(191, 191, 191)
+                                .addComponent(lblcomputador))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(212, 212, 212)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbljugador)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(btnpapel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btntijera, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(30, 30, 30))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblroca1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(202, 202, 202)
+                                        .addComponent(lblpapel1)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbltijera1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(btnpiedra, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(15, 15, 15)))
+                .addGap(44, 44, 44))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,7 +273,7 @@ public class gamemenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,17 +284,27 @@ public class gamemenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnpiedraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpiedraActionPerformed
-        lbljugador.setText("Jugador selecciono: Piedra");
         Computadora.roca();
+        seleccion();
+
     }//GEN-LAST:event_btnpiedraActionPerformed
 
     private void btnpapelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpapelActionPerformed
-        lbljugador.setText("Jugador selecciono: Papel");
+        Computadora.papel();
+        seleccion();
     }//GEN-LAST:event_btnpapelActionPerformed
 
     private void btntijeraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntijeraActionPerformed
-        lbljugador.setText("Jugador selecciono: Tijera");
+        Computadora.tijera();
+        seleccion();
     }//GEN-LAST:event_btntijeraActionPerformed
+    public void seleccion() {
+        lbljugador.setText("Jugador selecciono: " + Computadora.usuarioselect);
+        lblcomputador.setText("Computadora selecciono: " + Computadora.iaselect);
+        lblinicio.setText(Computadora.resultado);
+        lblnum1.setText(String.valueOf(Computadora.usuariopuntuaje));
+        lblnum2.setText(String.valueOf(Computadora.iapuntuaje));
+    }
 
     /**
      * @param args the command line arguments
@@ -328,7 +337,6 @@ public class gamemenu extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new gamemenu().setVisible(true);
-                Computadora ia = new Computadora();
             }
         });
     }
@@ -348,7 +356,7 @@ public class gamemenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     public javax.swing.JLabel lblcomputador;
     private javax.swing.JLabel lblganar;
-    private javax.swing.JLabel lblinicio;
+    public javax.swing.JLabel lblinicio;
     private javax.swing.JLabel lbljugador;
     public javax.swing.JLabel lblnum1;
     public javax.swing.JLabel lblnum2;
