@@ -74,6 +74,8 @@ public class Computadora extends game.gamemenu {
 
     public static void papel() {
         usuarioselect = "Papel";
+
+        random = r.nextInt(102 - 1);
     }
 
     public static void tijera() {
@@ -81,7 +83,24 @@ public class Computadora extends game.gamemenu {
     }
 
     public static void controlIA() {
-
+if (alterarWin > repetirWin + memoria) {
+    alterarWin -= 2;
+}
+if (repetirWin > alterarWin + memoria) {
+    repetirWin -= 2;
+}
+if (alterarEmpate > repetirEmpate + memoria) {
+    alterarEmpate -= 2;
+}
+if (repetirEmpate > alterarEmpate + memoria) {
+    repetirEmpate -= 2;
+}
+if (alterarPerder > repetirPerder + memoria) {
+    alterarPerder -= 2;
+}
+if (repetirPerder > alterarPerder + memoria) {
+    repetirPerder -= 2;
+}
     }
 
     public static void aprendizajeIA() {
