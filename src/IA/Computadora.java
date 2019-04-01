@@ -60,6 +60,7 @@ public class Computadora extends game.gamemenu {
                 iaselect = "Tijera";
                 usuariopuntuaje = usuariopuntuaje + 1;
                 resultado = "Ganaste";
+                confianza = confianza - 2;
                 historiaresultado = 1;
                 estrategia();
 
