@@ -88,14 +88,12 @@ public class Computadora extends game.gamemenu {
                 resultado = "Ganaste";
                 usuariopuntuaje = usuariopuntuaje + 1;
                 historiaresultado = 1;
-                confianza = confianza - 2;
                 estrategia();
 
             } else {
                 iaselect = "Tijera";
                 iapuntuaje = iapuntuaje + 1;
                 resultado = "Perdiste";
-                confianza = confianza + 1;
                 historiaresultado = 0;
                 estrategia();
 
@@ -115,7 +113,6 @@ public class Computadora extends game.gamemenu {
             iaselect = "Papel";
             resultado = "Ganaste";
             usuariopuntuaje = usuariopuntuaje + 1;
-            confianza = confianza - 2;
             historiaresultado = 1;
             estrategia();
 
@@ -125,7 +122,6 @@ public class Computadora extends game.gamemenu {
                 iaselect = "Piedra";
                 resultado = "Perdiste";
                 iapuntuaje = iapuntuaje + 1;
-                confianza = confianza + 1;
                 historiaresultado = 0;
                 estrategia();
 
@@ -180,20 +176,20 @@ public class Computadora extends game.gamemenu {
     public static void aprendizajeIA() {
         if (resultado.equals("Perdiste")) {
             if (alterarPerder > repetirPerder) {
-                chanceRoca = chanceRoca - (confianza / 2);
+                chanceRoca = chanceRoca - (confianza/2);
                 chancePapel = chancePapel - confianza;
             } else {
-                chanceRoca = chanceRoca + (confianza / 2);
+                chanceRoca = chanceRoca + (confianza/2);
                 chancePapel = chanceRoca + confianza;
             }
         } else {
             
             if (resultado.equals("Ganaste")) {
                 if (repetirWin > alterarWin) {
-                    chanceRoca = chanceRoca + (confianza / 2);
+                    chanceRoca = chanceRoca + (confianza/2);
                     chancePapel = chancePapel + confianza;
                 } else {
-                    chanceRoca = chanceRoca - (confianza / 2);
+                    chanceRoca = chanceRoca - (confianza/2);
                     chancePapel = chancePapel - confianza;
                 }
             }
