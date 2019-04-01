@@ -30,9 +30,6 @@ public class Computadora extends game.gamemenu {
     private static double alterarWin = 0;
     private static double alterarPerder = 0;
     private static double alterarEmpate = 0;
-    private static double conteoPapel = 0;
-    private static double conteoRoca = 0;
-    private static double conteoTijera = 0;
 
     //Inteligencia de la computadora
     private static double confianza = 4;
@@ -52,24 +49,26 @@ public class Computadora extends game.gamemenu {
 
             historiaresultado = 0;
             estrategia();
-            
+
         } else {
-            
+
             if (random < (chancePapel + chanceRoca)) {
                 iaselect = "Piedra";
                 resultado = "Empate";
                 estrategia();
 
-            }
-            else{
-              iaselect = "Tijera";
-              usuariopuntuaje = usuariopuntuaje + 1;
-              resultado = "Ganaste";
-              historiaresultado = 1;
-              estrategia();
-                
+            } else {
+                iaselect = "Tijera";
+                usuariopuntuaje = usuariopuntuaje + 1;
+                resultado = "Ganaste";
+                historiaresultado = 1;
+                estrategia();
+
             }
         }
+        aprendizajeIA();
+        controlIA();
+
     }
 
     public static void papel() {
@@ -83,28 +82,61 @@ public class Computadora extends game.gamemenu {
     }
 
     public static void controlIA() {
-if (alterarWin > repetirWin + memoria) {
-    alterarWin -= 2;
-}
-if (repetirWin > alterarWin + memoria) {
-    repetirWin -= 2;
-}
-if (alterarEmpate > repetirEmpate + memoria) {
-    alterarEmpate -= 2;
-}
-if (repetirEmpate > alterarEmpate + memoria) {
-    repetirEmpate -= 2;
-}
-if (alterarPerder > repetirPerder + memoria) {
-    alterarPerder -= 2;
-}
-if (repetirPerder > alterarPerder + memoria) {
-    repetirPerder -= 2;
-}
+        if (alterarWin > repetirWin + memoria) {
+            alterarWin -= 2;
+        }
+        if (repetirWin > alterarWin + memoria) {
+            repetirWin -= 2;
+        }
+        if (alterarEmpate > repetirEmpate + memoria) {
+            alterarEmpate -= 2;
+        }
+        if (repetirEmpate > alterarEmpate + memoria) {
+            repetirEmpate -= 2;
+        }
+        if (alterarPerder > repetirPerder + memoria) {
+            alterarPerder -= 2;
+        }
+        if (repetirPerder > alterarPerder + memoria) {
+            repetirPerder -= 2;
+        }
+        if (chancePapel > 70) {
+            chancePapel = 50;
+        }
+        if (chanceRoca > 70) {
+            chanceRoca = 50;
+        }
+        if (chancePapel < 10) {
+            chancePapel = 15;
+        }
+        if (chanceRoca < 10) {
+            chanceRoca = 15;
+        }
+        if (confianza < 1) {
+            confianza = 2;
+        }
     }
 
     public static void aprendizajeIA() {
-
+        if (resultado.equals("Perdiste")) {
+            if (alterarPerder > repetirPerder) {
+                chanceRoca = chanceRoca - (confianza / 2);
+                chancePapel = chancePapel - confianza;
+            } else {
+                chanceRoca = chanceRoca + (confianza / 2);
+                chancePapel = chanceRoca + confianza;
+            }
+        } else {
+            if (resultado.equals("Ganaste")) {
+                if (repetirWin > alterarWin) {
+                    chanceRoca = chanceRoca + (confianza / 2);
+                    chancePapel = chancePapel + confianza;
+                } else {
+                    chanceRoca = chanceRoca - (confianza / 2);
+                    chancePapel = chancePapel - confianza;
+                }
+            }
+        }
     }
 
     public static void estrategia() {
