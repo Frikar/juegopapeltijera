@@ -99,15 +99,16 @@ public class Computadora extends game.gamemenu {
                 estrategia();
 
             }
+        }
+
+        aprendizajeIA();
+        controlIA();
+        historiaselect = "Papel";
     }
 
-    aprendizajeIA();
-    controlIA();
-    historiaselect = "Papel";
-}
     public static void tijera() {
         usuarioselect = "Tijera";
-         random = r.nextInt(102 - 1);
+        random = r.nextInt(102 - 1);
 
         if (random < chancePapel) {
             iaselect = "Papel";
@@ -133,11 +134,11 @@ public class Computadora extends game.gamemenu {
                 estrategia();
 
             }
+        }
+        aprendizajeIA();
+        controlIA();
+        historiaselect = "Tijera";
     }
-    aprendizajeIA();
-    controlIA();
-    historiaselect = "Tijera";
-}
 
     public static void controlIA() {
         if (alterarWin > repetirWin + memoria) {
@@ -185,6 +186,7 @@ public class Computadora extends game.gamemenu {
                 chancePapel = chanceRoca + confianza;
             }
         } else {
+            
             if (resultado.equals("Ganaste")) {
                 if (repetirWin > alterarWin) {
                     chanceRoca = chanceRoca + (confianza / 2);
