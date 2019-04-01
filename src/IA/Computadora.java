@@ -46,7 +46,6 @@ public class Computadora extends game.gamemenu {
             iapuntuaje = iapuntuaje + 1;
             confianza = confianza + 1;
             resultado = "Perdiste";
-
             historiaresultado = 0;
             estrategia();
 
@@ -68,18 +67,77 @@ public class Computadora extends game.gamemenu {
         }
         aprendizajeIA();
         controlIA();
-
+        historiaselect = "Piedra";
     }
 
     public static void papel() {
         usuarioselect = "Papel";
 
         random = r.nextInt(102 - 1);
+
+        if (random < chancePapel) {
+            iaselect = "Papel";
+            resultado = "Empate";
+            estrategia();
+
+        } else {
+
+            if (random < (chancePapel + chanceRoca)) {
+                iaselect = "Piedra";
+                resultado = "Ganaste";
+                usuariopuntuaje = usuariopuntuaje + 1;
+                historiaresultado = 1;
+                confianza = confianza - 2;
+                estrategia();
+
+            } else {
+                iaselect = "Tijera";
+                iapuntuaje = iapuntuaje + 1;
+                resultado = "Perdiste";
+                confianza = confianza + 1;
+                historiaresultado = 0;
+                estrategia();
+
+            }
     }
 
+    aprendizajeIA();
+    controlIA();
+    historiaselect = "Papel";
+}
     public static void tijera() {
         usuarioselect = "Tijera";
+         random = r.nextInt(102 - 1);
+
+        if (random < chancePapel) {
+            iaselect = "Papel";
+            resultado = "Ganaste";
+            usuariopuntuaje = usuariopuntuaje + 1;
+            confianza = confianza - 2;
+            historiaresultado = 1;
+            estrategia();
+
+        } else {
+
+            if (random < (chancePapel + chanceRoca)) {
+                iaselect = "Piedra";
+                resultado = "Perdiste";
+                iapuntuaje = iapuntuaje + 1;
+                confianza = confianza + 1;
+                historiaresultado = 0;
+                estrategia();
+
+            } else {
+                iaselect = "Tijera";
+                resultado = "Empate";
+                estrategia();
+
+            }
     }
+    aprendizajeIA();
+    controlIA();
+    historiaselect = "Tijera";
+}
 
     public static void controlIA() {
         if (alterarWin > repetirWin + memoria) {
