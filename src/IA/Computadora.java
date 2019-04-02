@@ -66,7 +66,7 @@ public class Computadora extends game.gamemenu {
 
             }
         }
-        aprendizajeIA();
+        aprendizajeIA(2);
         controlIA();
         historiaselect = "Piedra";
     }
@@ -87,6 +87,7 @@ public class Computadora extends game.gamemenu {
                 iaselect = "Piedra";
                 resultado = "Ganaste";
                 usuariopuntuaje = usuariopuntuaje + 1;
+                confianza = confianza - 2;
                 historiaresultado = 1;
                 estrategia();
 
@@ -94,13 +95,14 @@ public class Computadora extends game.gamemenu {
                 iaselect = "Tijera";
                 iapuntuaje = iapuntuaje + 1;
                 resultado = "Perdiste";
+                confianza = confianza + 1;
                 historiaresultado = 0;
                 estrategia();
 
             }
         }
 
-        aprendizajeIA();
+        aprendizajeIA(2);
         controlIA();
         historiaselect = "Papel";
     }
@@ -112,6 +114,7 @@ public class Computadora extends game.gamemenu {
         if (random < chancePapel) {
             iaselect = "Papel";
             resultado = "Ganaste";
+            confianza = confianza - 2;
             usuariopuntuaje = usuariopuntuaje + 1;
             historiaresultado = 1;
             estrategia();
@@ -121,6 +124,7 @@ public class Computadora extends game.gamemenu {
             if (random < (chancePapel + chanceRoca)) {
                 iaselect = "Piedra";
                 resultado = "Perdiste";
+                confianza = confianza + 1;
                 iapuntuaje = iapuntuaje + 1;
                 historiaresultado = 0;
                 estrategia();
@@ -132,7 +136,7 @@ public class Computadora extends game.gamemenu {
 
             }
         }
-        aprendizajeIA();
+        aprendizajeIA(2/3);
         controlIA();
         historiaselect = "Tijera";
     }
@@ -173,24 +177,28 @@ public class Computadora extends game.gamemenu {
         }
     }
 
-    public static void aprendizajeIA() {
+    public static void aprendizajeIA(int num) {
         if (resultado.equals("Perdiste")) {
             if (alterarPerder > repetirPerder) {
-                chanceRoca = chanceRoca - (confianza/2);
+                chanceRoca = chanceRoca - (confianza / num);
                 chancePapel = chancePapel - confianza;
             } else {
-                chanceRoca = chanceRoca + (confianza/2);
-                chancePapel = chanceRoca + confianza;
+                if (repetirPerder > alterarPerder) {
+                    chanceRoca = chanceRoca + (confianza / num);
+                    chancePapel = chanceRoca + confianza;
+                }
             }
         } else {
-            
+
             if (resultado.equals("Ganaste")) {
                 if (repetirWin > alterarWin) {
-                    chanceRoca = chanceRoca + (confianza/2);
+                    chanceRoca = chanceRoca + (confianza / num);
                     chancePapel = chancePapel + confianza;
                 } else {
-                    chanceRoca = chanceRoca - (confianza/2);
-                    chancePapel = chancePapel - confianza;
+                    if (alterarWin > repetirWin) {
+                        chanceRoca = chanceRoca - (confianza / num);
+                        chancePapel = chancePapel - confianza;
+                    }
                 }
             }
         }
